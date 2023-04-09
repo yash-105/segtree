@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define int long long
 
 int build(int node,vector<int>&v,vector<int>&segtree,int start,int end){
      if(start==end){
@@ -40,7 +41,7 @@ void update(int node,vector<int>&v,vector<int>&segtree,int start,int end,int pos
     segtree[node]=segtree[node*2]+segtree[node*2+1];
 }
 
-int main(){
+signed main(){
     int n;cin>>n;
     vector<int>v(n);
     vector<int>segtree(4*n);
