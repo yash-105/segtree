@@ -2,7 +2,7 @@
 using namespace std;
 #define int long long
 
-int build(int node,vector<int>&v,vector<int>&segtree,int start,int end){
+int buildsegtree(int node,vector<int>&v,vector<int>&segtree,int start,int end){
      if(start==end){
         segtree[node]=v[start];
         return segtree[node];
@@ -46,7 +46,7 @@ signed main(){
     vector<int>v(n);
     vector<int>segtree(4*n);
     for(int i=0;i<n;i++)cin>>v[i];
-    build(1,v,segtree,0,n-1);
+    buildsegtree(1,v,segtree,0,n-1);
     int q;cin>>q;
     while(q--){
         int l,r;cin>>l>>r;
